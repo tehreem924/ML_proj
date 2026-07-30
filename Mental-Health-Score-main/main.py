@@ -6,7 +6,7 @@ from typing import Literal
 from fastapi.middleware.cors import CORSMiddleware
 
 model = joblib.load('Mental_Health_Model.pkl')
-top_countries = ['Other','India','USA','Canada','Australia','UK','Germany','Mexico','Turkey','France']
+top_countries = ['Other','Pakistan','USA','Canada','Australia','UK','Germany','Mexico','Turkey','France']
 
 app = FastAPI()
 
@@ -46,7 +46,7 @@ class PredictionResponse(BaseModel):
 
 @app.get('/')
 def greet():
-    return {'Welcome to Sheryians AI School Guys'}
+    return {'Welcome'}
 
 
 @app.post('/predict', response_model=PredictionResponse) #6.77777
